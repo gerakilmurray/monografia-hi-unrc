@@ -696,8 +696,8 @@
 
 % default definitions
 % -------------------
-\def\theevenhe@d{\footnotesize\thepage \hfil \leftmark\hbox{}}
-\def\theoddhe@d{\hbox{}\footnotesize\rightmark \hfil \thepage}
+\def\theevenhe@d{\footnotesize[\thepage] \hfil \leftmark\hbox{}}
+\def\theoddhe@d{\hbox{}\footnotesize\rightmark \hfil [\thepage]}
 \def\theevenf@@t{}
 \def\theoddf@@t{}
 
@@ -818,7 +818,7 @@
   \edef\TODAY{\uppercase{\today}}
   \def\leftmark{\@journal\@titletext}\def\rightmark{\titl@line}
   \def\theeventphe@d{\footnotesize\thepage \hfil \leftmark\hbox{}}
-  \def\theoddtphe@d{\hbox{}\footnotesize\leftmark \hfil \thepage}
+  \def\theoddtphe@d{\hbox{}\footnotesize\leftmark \hfil [\thepage]}
   \if@technote % make header a little bigger
     \def\theevenhe@d{\small\thepage \hfil \leftmark\hbox{}}
     \def\theoddhe@d{\hbox{}\small\rightmark \hfil \thepage}
@@ -921,8 +921,8 @@ page \thepage \space undefined}}%
 
 \def\set@title#1{\gdef\@title{#1}\global\def\set@title##1{}}
 \def\setsh@rttitle#1{\gdef\sh@rttitle{#1}\global\def\setsh@rttitle##1{}}
-\def\titlea[#1]#2{\set@title{#2}\setsh@rttitle{\uppercase{#1}}}
-\def\titleb#1{\set@title{#1}\setsh@rttitle{\uppercase{#1}}}
+\def\titlea[#1]#2{\set@title{#2}\setsh@rttitle{\textit{#1}}}
+\def\titleb#1{\set@title{#1}\setsh@rttitle{\textit{#1}}}
 
 \def\authorinfo#1{\let\\\relax\thanks{#1}}
 
@@ -1039,7 +1039,7 @@ page \thepage \space undefined}}%
     \end{center}\par\vfil\mbox{}}
 
 \def\@journal{\typeout{ieee: Warning! No \noexpand\journal given!}}
-\def\journal#1{\def\@journal{\uppercase{#1}}}
+\def\journal#1{\def\@journal{\textit{#1}}}
 
 \def\@ieeecopyright{\typeout{ieee: Warning! No \noexpand\ieeecopyright given!}}
 \def\ieeecopyright#1{\def\@ieeecopyright{#1}}
