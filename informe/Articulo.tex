@@ -1,8 +1,8 @@
 \documentclass[%
-	draft,
+% 	draft,
 	%submission,
-	%compressed,
-	%final,
+% 	compressed,
+ 	final,
 	%
 	%technote,
 	%internal,
@@ -10,36 +10,45 @@
 	%inpress,
 %	reprint,
 %
-	%titlepage,
+% 	titlepage,
 	notitlepage,
 	%anonymous,
 	narroweqnarray,
 	inline,
-	twoside,
+ 	twoside,
 %       invited,
 	]{ieee}
 
-\newcommand{\latexiie}{\LaTeX2{\Large$_\varepsilon$}}
+% \newcommand{\latexiie}{\LaTeX2{\Large$_\varepsilon$}}
 
 \usepackage[spanish]{babel}
+\newcommand{\link}[1]{\textit{}{#1}}
+\usepackage[left=3.2cm,top=3.5cm,bottom=0.5cm,right=3.2cm]{geometry}
 
 \begin{document}
-
+\onecolumn
+% \sffamily
 %----------------------------------------------------------------------
 % Title Information, Abstract and Keywords
 %----------------------------------------------------------------------
-\title[Desarrollos de Investigacion a nivel de Hardware en Argentina]{Desarrollos de Investigacion a nivel de Hardware en Argentina}
+\title[Hardware en Argentina]{\sffamily \textbf{Desarrollos de Investigaci\'on a nivel de Hardware en Argentina}}
 
 % format author this way for journal articles.
 % MAKE SURE THERE ARE NO SPACES BEFORE A \member OR \authorinfo
 % COMMAND (this also means `don't break the line before these
 % commands).
- \author[]{KILMURRAY, Gerardo Luis %\authorinfo{gerakilmurray@gmail.com}
- - PICCO, Gonzalo Martin%\authorinfo{gonzalopicco@gmail.com} 
- }
+\author{\textbf{Kilmurray}, \textit{Gerardo Luis} \hspace{4cm} \textbf{Picco}, \textit{Gonzalo Mart\'in}\\
+        \small{\textit{gerakilmurray@gmail.com}}  \hspace{5.5cm}  \small{\textit{gonzalopicco@gmail.com}} \\ [0.5cm] 
+	\large \textbf{Universidad Nacional de R\'io Cuarto}\\ \textit{Departamento de Computaci\'on}\\[1cm]
+	} 
+
+
+% \author[]{KILMURRAY, Gerardo Luis %\authorinfo{gerakilmurray@gmail.com}
+%  - PICCO, Gonzalo Martin%\authorinfo{gonzalopicco@gmail.com} 
+%  }
 \journal{Monograf\'ia Historia de la Inform\'atica}
 % \titletext{Estudiantes de computaci\'on Universidad Nacional de R\'io Cuarto}
-% \lognumber{version 1}
+ \lognumber{version 1}
 % \pubitemident{S 0018--9456(97)09426--6}
 \loginfo{Estudiantes de computaci\'on Universidad Nacional de R\'io Cuarto}
 \firstpage{1}
@@ -50,7 +59,11 @@
 \sloppy
 
 \begin{abstract} 
-Argentina ha pasado por millones de avances y cuestiones problematicas que prodijeron que las investigaciones siempre se vieran salteadas por alguna guerra politica o golpe militar. A medida que los gobiernos radicales se adueñaban del pais, el mismo se veia agarrado por un mundo politico.
+Los desarrollos y avances inform\'aticos de Argentina siempre estuvieron intimamente relacionados con la situaci\'on pol\'itica que se estaba atravezando.La gran cantidad de gobiernos militares imposibilitaron, en muchos momentos, los acanves de una gran cantidad de proyectos. La llegada de la primera computadora, Clementina, a la Universidad de Buenos Aires se encuentra en uno de los acontesimientos mas impostantes de la computaci\'on en el pais, muchos aseguran que \'este marc\'o el nacimiendo de los desarrollos informaticos en Argentina.
+
+Dentro de los desarrollos inform\'aticos propios m\'as importantes se encuentran el Computador electr\'onico de la Universidad Nacional del Sur (CEUNS), llevado a cabo por Jorge Santos y el Computador electr\'onico de la Facultad de Ingenier\'ia de Buenos Aires (CEFIBA), al mando de Ciancanglini. Si bien estos proyectos no obtuvieron el desarrollo de hardware que se esperaba, promovieron el nacimiento de grupos de investigaci\'on de muy destacados para la ciencia inform\'aticas. A nivel industrial, nuestro pais no se encuentra entre los paises productores de instrumentos digitales, pero existieron grandes proyectos de empresas nacionales como fueron el caso de FATE S.A......... 
+Actualmente, las carreras tecnol\'ogicas, como es el caso de las de la computaci\'on forman parte de una de los pilares mayormente abordados entre los objetivos de los planes politicos, entre ellos se pueden nombrar gran cantidad de becas de incentivo, de doctorado, organismos como el CONICET. \footnote{Algunas de ellas son becas TICs, becas bicentenario, becas de parte del Cordoba Ciencias, entre otras. Ademas encontramos muchas becas en el \'ambito
+privado, como las empresas INTEL, Microsoft, Oracle, etc.}
 \end{abstract}
 
 % \begin{keywords}
@@ -60,7 +73,97 @@ Argentina ha pasado por millones de avances y cuestiones problematicas que prodi
 % SECTION: Introduction
 %----------------------------------------------------------------------
 \section{Introduction}
-Las secciones despues veremos que tal.
+
+Como parte de la sociedad nacida desde la d\'ecada del 80, tenemos una visi\'on bastante lejana de los comienzos de los dispositivos electr\'onicos a los que denominamos “computadoras”. Para muchos de nosotros estos instrumentos digitales han pasado a ser una parte indispensable de nuestra vida social, laboral, de esparcimiento, y como uno de los medios m\'as comunes para comunicarnos con los dem\'as. La era digital en la cual estamos inmersos nos imposibilita imaginarnos un d\'ia sin ellos. 
+Seguramente, la mayor\'ia, como en nuestro caso, adquiri\'o su primera computadora con car\'acteristicas aproximadas a 8 Mb de memoria, un procesador de 200 Mhz, un disco de almacenamiento de un par de Gigas, un monitor CRT de 15 pulgadas. Estas caracter\'isticas que al momento de la adquisici\'on, los vendedores nos aseguraban que ten\'iamos para muchos a\~nos venideros, al pasar el tiempo se convirtieron en carromatos electr\'oniocs s\'uper obsoletos, actualmente hablando. Esto debido al crecimiento masivo y continuo que se est\'a dando en los \'ultimos a\~nos.
+Este comportamiento, fue anticipado y enunciado en la Ley de Gordon E. Moore \footnote{\link{http://es.wikipedia.org/wiki/Ley\_de\_Moore}}, la cual sigue y seguir\'a teniendo vigencia pareciera por muchos a\~nos m\'as. Esto genera que renovar nuestros equipos de computaci\'on, sea una tarea cada vez m\'as com\'un al pasar unos pocos pares de a\~nos de haberlos comprado.
+Si nos ubicamos en d\'ecadas anteriores al 80, observaremos que existen radicales diferencias desde nuestra perspectiva consumista.
+El nacimiento de las computadoras se remonta a la d\'ecada del 40, con objetivos puramente militares, ya que el mundo estaba inmerso en la Segundo Guerra Mundial (WWII), con el desarrollo de una computadora denominada Z3 \footnote{\link{http://en.wikipedia.org/wiki/Z3\_(computer)}}, en 1941, por parte cient\'ificos alemanes. Mientras que COLOSSUS \footnote{\link{http://en.wikipedia.org/wiki/Colossus\_computer}}, en 1944, fue desarrollada por los brit\'anicos para decodificar los mensajes cifrados de los alemanes. Casi al mismo tiempo, en los EEUU, en la Universidad de Pennsylvania, el modelo denominado ENIAC \footnote{\link{http://en.wikipedia.org/wiki/ENIAC)}} era puesto en marcha en 1946, financiada por la U. S. Army.
+Todas estas computadoras no respetaban el modelo de John von Neumann, matem\'atico h\'ungaro, que en 1945, en un informe sobre el dise\~no de la computadora EDVAC, propuso el concepto de programa almacenado, utilizando el mismo dispositivo de almacenamiento tanto para las instrucciones como para los datos. Luego denominada Arquitectura Von Neumann \footnote{\link{(http://en.wikipedia.org/wiki/Von\_Neumann\_architecture)}}, actualmente la mayor\'ia de computadoras modernas est\'an basadas en esta arquitectura.
+Por lo que la primera en respetarla, aunque no en su totalidad, fue la desarrollada por el Ballistic Research Laboratory (BRL), en EEUU, a la cual denominaron EDVAC \footnote{\link{(http://en.wikipedia.org/wiki/EDVAC)}}, la cual funcion\'o desde 1949 hasta 1961, demostrando un funcionamiento confiable.
+Pero hasta ese momento, el acceso a las computadoras estaba restringido a cient\'ificos, ingenieros electr\'onicos y personal especializado, no solamente por sus usos militares, sino tambi\'en porque su operaci\'on era a niveles muy cercanos al hardware. Adem\'as, de que estas computadoras necesitaban un espacio f\'isico muy significativo, un consumo el\'ectrico considerable y un mantenimiento constante.
+As\'i mismo, a nivel acad\'emico hubo grandes avances en esta materia en paralelo. En la Universidad de Manchester bajo la direcci\'on de Tom Kilburn, se llev\'o a cabo el Proyecto “Manchester Small Scale Experimental Machine” (SSEM), que ten\'ia como prop\'osito construir una computadora o un prototipo, que respetara la arquitectura von Neumann. El 21 de junio de 1948, se ejecut\'o con \'exito el primer programa almacenado, en la computadora producto de este proyecto, a la cual se denomin\'o BABY.
+Despu\'es de estos trabajos a nivel experimental, se contrat\'o a la la firma brit\'anica Ferranti (http://en.wikipedia.org/wiki/Ferranti), para que fabricara industrialmente y comercializara una computadora a la cual se denomin\'o Manchester Mark I \footnote{\link{(http://en.wikipedia.org/wiki/Manchester\_Mark\_1)}}.
+Posteriormente, Ferranti construy\'o el modelo Ferranti Mark I que usaba n\'ucleos magn\'eticos para los registros. A este modelo le siguieron la Ferranti Mark II y luego la Mercury Ferranti (1956), esta \'ultima es el nexo de la computaci\'on con la Argentina.
+En la d\'ecada del 60, la Universidad de Buenos Aires (UBA), por iniciativa y gesti\'on del Dr. Manuel Sadosky \footnote{\link{(http://es.wikipedia.org/wiki/Manuel\_Sadosky)}}, compr\'o la primera computadora de la Argentina. Sadosky fue un matem\'atico y cient\'ifico argentino considerado por muchos como el “padre de la computaci\'on en la Argentina”. Adem\'as en 1962 impuls\'o la creaci\'on del Instituto de C\'alculo, as\'i como tambi\'en la carrera de Computador Cient\'ifico.
+Las negociaciones para la adquisici\'on de esta computadora comenzaron en 1958. El modelo elegido fue una Mercury Ferranti, luego de una licitaci\'on a la cual se presentaron IBM, Remington y Philco de los Estados Unidos y Ferranti de Inglaterra. Esta elecci\'on, seg\'un Sadosky: “Para la \'epoca se trataba de una m\'aquina de excelente categor\'ia t\'ecnica no s\'olo por su rapidez y tipo de memoria, sino tambi\'en porque el grupo de investigadores de la Universidad de Manchester hab\'ia desarrollado un lenguaje, Autocode, de f\'acil aprendizaje y de buenas caracter\'isticas para el tratamiento de problemas cient\'ificos”.
+Se puede decir que la llegada de esta computadora, a la cual llamaron CLEMENTINA  debido a que al arrancar emit\'ia pitidos que se asemejaban a la melod\'ia del folk Clementine, marc\'o el nacimiento de las investigaciones entorno a la computadora en Argentina.
+A su vez, cuando ya exist\'ia una masa de profesionales formados en electr\'onica digital, se encararon proyectos para construir computadoras \'integramente dentro de nuestro pa\'is. Muchos de ellos hab\'ian tenido contacto con grupos, como el de la Universidad de Manchester, fueron fundamentales en estos proyectos. La CEFIBA en la UBA, dirigida por el Ing. Humberto Ciancaglini y CEUNS en la Universidad del Sur (UNS), de la mano del Ing. Jorge Santos, fueron dos prototipos de computadoras que en el exterior y en carreras La UBA y la UNS construyen sendos prototipos de computadoras que generaron mucho m\'as que hardware, sino tambi\'en la formaci\'on de recursos humanos especializados en computaci\'on digital.
+
+%----------------------------------------------------------------------
+% SECTION: Desarrollos
+%----------------------------------------------------------------------
+\section{Proyectos Acad\'emicos}
+\begin{quote}
+Aca podemos hablar un poco introduciendo a lo que viene.
+\end{quote}
+
+\subsection*{CEFIBA}
+Luego de la Segunda Guerra Mundial (WWII), en donde se vio la importancia de la aplicaci\'on de t\'ecnicas digitales sobre diversos campos, la computaci\'on cobr\'o m\'as relevancia. En la Argentina, muchos profesionales y cient\'ificos formados en las universidades nacionales, estuvieron radicados en Europa en laboratorios y centros que se dedican a la fabricaci\'on de computadores digitales. Esa interacci\'on, provoc\'o que en 1958 se proyectara la construcci\'on de una peque\~na computadora electr\'onica digital, a la que denominaron CEFIBA (Computadora Electr\'onica de la Facultad de Ingenier\'ia de la Universidad de Buenos Aires). 
+
+En la d\'ecada del 30, Argentina exist\'ian industrias dedicadas a la fabricaci\'on de transistores, utilizados en la elaboraci\'on de equipos de radio de poca potencia. Mientras que las v\'alvulas, eran importadas de Europa o EEUU. Al estallar la WWII, las importaciones se cortaron en su totalidad, por lo que surgi\'o la necesidad de cubrir ese faltante de v\'alvulas en la industria. As\'i que, empresas como SAIRA (Sociedad An\'onima de Industriales de la Rep\'ublica Argentina) y la holandesa Philips, comenzaron a desarrollar, en una primera instancia, v\'alvulas electr\'onicas de recepci\'on y luego de mediana y alta potencia, cubriendo las necesidades del mercado.
+
+Debido a todo esto, se intensific\'o la ense\~nanza electr\'onica y telecomunicaciones, aun \'intimamente relacionado con la radioelectr\'onica. Por lo que surgieron varias carreras, laboratorios y centros, como el Laboratorio de Investigaciones Electr\'onicas (LIR), creado por Philips en 1942. En la UBA, se cre\'o un curso de postgrado de Ingenier\'ia en Telecomunicaciones, de 2 a\~nos de duraci\'on.
+
+Ya para el a\~no 1957, exist\'ian profesionales formados en casi todos los aspectos de la electr\'onica, pero falta perfeccionarse en t\'ecnicas digitales. Por lo que, la UBA realiz\'o un ciclo de siete conferencias dictadas, entre otros, por el Dr. Sadosky y los ingenieros Humberto R. Ciancaglini, Marcelo Diamand y Felipe Tanco . De \'estas se gener\'o un publicaci\'on de 140 p\'aginas, “Ciclo de Conferencias sobre Computadoras Digitales en el Centro Argentino de Ingenieros ”.
+Cuando se arm\'o el grupo designado para el proyecto CEFIBA, se puso como director al Ing. Felipe Tanco, que se hab\'ia desempe\~nado en la empresa RCA de los EEUU, precisamente en temas de computadoras digitales. Aunque a nivel comercial, las computadoras del mercado funcionaban con v\'alvulas electr\'onicas, la CEFIBA iba a ser totalmente transistorizada. Esto fue porque Tanco, demostr\'o que el uso de transistores era m\'as ventajoso para elaboraci\'on de computadoras.
+
+En el dise\~no de la CEFIBA se pueden destacar los siguiente componentes:
+\begin{itemize}
+\item  Memoria: en una primera instancia se fabric\'o una memoria cil\'indrica recubierta por pintura de ferrita, la cual funcion\'o pero luego ante fallas de almacenamiento fue reemplazada por una de fabricaci\'on brit\'anica. El cilindro ten\'ia un di\'ametro algo mayor de 10 cent\'imetros y una longitud 
+de unos 12 cent\'imetros. La capacidad de la memoria era de 4.096 palabras de 32 bits cada una .
+
+\item Impresora: ya que no se contaba con recursos para adquirir una impresora disponible en el mercado, se opt\'o por utilizar una m\'aquina de escribir mec\'anica modificada , a la cual se le
+incorporaron solenoides que al ser energizados succionaban sus n\'ucleos y con su movimiento accionaban mec\'anicamente los tipos impresores. La computadora transformaba el car\'acter alfab\'etico o num\'erico a ser impreso en un pulso de corriente que energizaba la bobina del solenoide correspondiente al car\'acter a ser impreso .
+
+\item Tablero electr\'onico: la estructura principal de soporte de los componentes de la CEFIBA, fue un armario met\'alico, en el cual se alojaron la fuente de alimentaci\'on y las plaquetas de la computadora. El sistema electr\'onico final se utilizaron 1.405 transistores, 1.661 diodos de germanio, 5.048 resistores, 2.200 capacitores y centenares de metros de alambre de conexiones. El uso de transistores en lugar de v\'alvulas electr\'onicas, disminuy\'o sustancialmente la potencia utilizada y con 
+ello simplific\'o los problemas de refrigeraci\'on del sistema.
+
+\item Entrada de programas : los mismo eran escritos en lenguaje m\'aquina, luego mediante un compilador, especialmente realizado para el proyecto, se ingresaban los programas a la memoria de la CEFIBA a trav\'es de cintas perforadas, que eran confeccionadas mediante un teletipo.
+
+\item Consola: para su manejo se dispon\'ia de una consola operacional, que era un escritorio met\'alico en el que se alojaba el cilindro de memoria, la impresora , el lector de cinta perforada y una botonera que permit\'ia introducir las palabras de 32 bits directamente al cilindro de memoria. 
+\end{itemize}
+
+Al concluir el proyecto en 1962, en menos de 4 a\~nos de desarrollo, fue presentada el d\'ia 10 de agosto en un acto en la Facultad de Ingenier\'ia. El Ing. Ciancaglini destac\'o que: ``\textit{... el objetivo de la construcci\'on de CEFIBA no era el de sustituir la utilizaci\'on de computadoras comerciales, sino el dar una preparaci\'on profunda en los temas de t\'ecnicas digitales y del hardware" a j\'ovenes ingenieros...}'' El prop\'osito fue generar en el pa\'is una masa cr\'itica de profesionales en computaci\'on digital.
+
+
+\subsection*{CEUNS}
+La Universidad Nacional del Sur (U.N.S.) situada en la ciudad de Bah\'ia Blanca (Provincia de Buenos Aires), sobre el Atl\'antico a 800 km. al sur de la ciudad de Buenos Aires fue confiada a Vicente Fatone (1903-1962), una de las mayores personalidades intelectuales de entonces. A fines de 1956 se cre\'o un Seminario de Computadores, para estudiantes avanzados de la carrera de Ingenier\'ia El\'ectrica, que qued\'o a cargo de Jorge Santos, quien fund\'o al a\~no siguiente el Laboratorio de Computadores (hoy Laboratorio de Sistemas Digitales), en cuyo seno sigui\'o funcionando el Seminario.
+En 1959 Jorge Santos fue a Manchester, formando parte de la segunda tanda de becarios externos del CONICET. En 1961 Santos vuelve a nuestro pais y aprovech\'o la experiencia adquirida durante su estancia en la Universidad de Manchester para emprender la construcci\'on de un computador al que llam\'o Computador Electr\'onico de la Universidad Nacional del Sur (CEUNS) o tambien denominado por la prensa, de aquel entonces, como “cerebro electronico”. Santos se hab\'ia propuesto demostrar que era posible construir una  computadora de bajo costo, en una \'epoca en la que el alquiler o la compra de esas m\'aquinas estaba s\'olo al alcance de organismos o empresas con s\'olidos recursos. Para el proyecto la Provincia de Buenos Aires otorg\'o un subsidio economico de  100.000 d\'olares, del cual s\'olo se pudo percibir la d\'ecima parte, debido a los sucesos politicos ocurridos en 1962 (ca\'ida del presidente Frondizi). La construcci\'on qued\'o sin efecto cuando se hab\'ia completado el dise\~no.
+Algunas de las caracteristicas importantes que presentaba CEUNS son:
+\begin{description}
+\item El uso de barritas de ferritas para la memoria ROM, las mismas habian sido traidas por Santos de Manchester, seg\'un \'el cuenta en una entrevista realizada, “en Manchester se trabajaba a 1 Mb y ac\'a dijimos vamos a trabajar a 1⁄4 de Mb”. La memoria contaba con dos, como especies, de “bobinitas”, una para leer y otra para testear, ademas seg\'un nos comento Santos, ellos realizaron trabajos experimetales sobre memorias ternarias, las cuales no logaron implementar en CEUNS. Nos dijo: ``\textit{Para trabajar con memoria ternaria ten\'ia que cancelar la magnetizaci\'on previa y desmagnetizarlo. Entonces cuando le\'ia no le\'ia nada, es decir, si estaba un uno se le\'ia un uno si estaba un cero se le\'ia un cero, si hab\'ia un dos no se le\'ia nada}''.
+\item La entrada y salida de CEUNS se realizaba utilizando como soporte cinta de papel perforada de 5 canales y usaba para codificar la informaci\'on el c\'odigo FERRANTI. La unidad de entrada era un lector fotoel\'ectrico Ferranti con una velocidad de 500 c/seg. La unidad de salida era una perforadora electromec\'anica con velocidad de 33 c/seg.
+\end{description}
+
+Como bien dijo Santos el proyecto CEUNS no solo significo un computador, sino tambien proyecto que nucleo a un grupo de investigadores.
+``\textit{yo creo, si bien el Proyecto CEUNS (Computador Electr\'onico de la Universidad Nacional del Sur) fue importante, en realidad fue el n\'ucleo de condensaci\'on de un grupo de investigaci\'on y aunque el objetivo principal era CEUNS, como su producto en esa \'epoca cuando pr\'acticamente nadie publicada en revistas indexadas... digamos, CEUNS fue un pretexto para nuclear a toda la gente, algo que ligue, eso fue CEUNS}''
+
+%----------------------------------------------------------------------
+% SECTION: Proyectos comerciales
+%----------------------------------------------------------------------
+\section{Proyectos comerciales}
+Podriamo poner algo para introducir.
+
+\subsection*{Serie 1000}
+Este fue uno de los primeros proyectos ambiciosos de una industria argentina en el campo de la computaci\'on digital. El responsable fue la Divisi\'on Electr\'onica  de FATE S.A., en la cual se desempe\~naba como Gerente General el Ing. Roberto Zubieta.
+El proyecto que tuvo vigencia desde 1973 al 1976, consisti\'o principalmente en el dise\~no, desarrollo, producci\'on y
+comercializaci\'on de un minicomputador de porte medio, abarcando su hardware y software. Adem\'as, fue un esfuerzo pionero en la materia en toda Am\'erica Latina, por parte de una empresa de capitales nacionales con tecnolog\'ia generada internamente en los componentes centrales del producto. Buscaba competir en el mercado con los sistemas importados, por lo que se pretendi\'o que fuera una
+computadora al ``\textit{estado del arte}'' del momento.
+
+La empresa estim\'o la cantidad de sistemas de la Serie 1000 a ser provistos, durante el per\'iodo 1977-1981, en 12, 19, 28, 33 y 35,
+respectivamente, instalaciones anuales.
+Las principales caracter\'isticas del hardware fueron:
+\begin{itemize}
+\item Procesador Central: se implement\'o en base a un microprocesador integrado de procesamiento paralelo de 24 bits, con caracter\'isticas de microprogramaci\'on con almacenamiento de control escribible (WCS). Tuvo un microciclo de 300 micro segundos y un conjunto de microinstrucciones especialmente dise\~nado para la implementaci\'on de int\'erpretes. Dispon\'ia de 32 registros: 16 de prop\'osito general y 16 dedicados y 1 stack de 64 capas.
+\item Memoria: era escalable de 8KB a 65KB en segmentos de 8KB. El tiempo de acceso al nivel de almacenamiento fue de 340 nano segundos y el tama\~no de palabra variable de 1 a 24 bits.
+\footnote{Tanto el procesador central como la memoria eran de tecnolog\'ia enbase a circuitos integrados MOS VLSI.}
+\item Almacenamiento: utiliz\'o discos r\'igidos, desde 1 Mb hasta m\'as de 10 Mb. El producto est\'andar ten\'ia un disco r\'igido y uno removible, ambos de 5Mb.
+\item Procesador alfanum\'erico: dispon\'ia de un microprocesador microprogramado, que soportaba hasta 16 canales de Entrada/Salida. Se pod\'ian tener m\'as de 1 microprocesador dentro del sistema. La tasa de transferencia de datos total es de 3 Mb/ seg. m\'ax., la del canal de transferencia es de 1 Mb/ seg. m\'ax. y los 16 canales pueden estar operativos al mismo tiempo.
+\item Terminal de entrada de datos: la Serie 1000 ten\'ia terminal con una pantalla de tipo CRT (Cathode Ray Tube) y un teclado alfanum\'erico, y estaba provista de un microprocesador programable. La pantalla de operaci\'on tambi\'en del tipo CRT de 16 l\'ineas de 64 caracteres, con una matriz de 7 x 9 y una conexi\'on de 4 hilos e interfase RS 232.
+\item Impresora: la velocidad de impresi\'on lograda variaba seg\'un desde los 60 caracteres por segundo hasta, la m\'axima admisible, 200 lpm (l\'ineas por minuto). El equipo est\'andar era una impresora del tipo ``Margarita'' de 132 columnas.
+\item Otros perif\'ericos: El sistema admit\'ia otros perif\'ericos adecuados para sus objetivos de mercado y para el adecuado desempe\~no del mismo.
+\end{itemize}
 
 %----------------------------------------------------------------------
 % SECTION: Estado del arte
@@ -69,10 +172,11 @@ Las secciones despues veremos que tal.
 Las secciones despues veremos que tal
 
 %----------------------------------------------------------------------
-% SECTION: Desarrollos
+% SECTION: Actualidad
 %----------------------------------------------------------------------
-\section{Desarrollos destacados}
-Las secciones despues veremos que tal
+\section{Actualidad}
+poner cuestiones de FATE y dem\'as
+
 
 %----------------------------------------------------------------------
 % SECTION: Conclucion
@@ -83,17 +187,21 @@ Las secciones despues veremos que tal
 
 \begin{thebibliography}{1}
 
-\bibitem{lamport}
-Leslie Lamport,
-\newblock {\em A Document Preparation System: {\LaTeX} User's Guide and
-  Reference Manual},
-\newblock Addison-Wesley, Reading, MA, 2nd edition, 1994.
-\newblock Be sure to get the updated version for \latexiie!
+\bibitem{babini} Jos\'e Babini La llegada de la computadora a la argentina.
+\bibitem {santos} Entrevista Jorge Santos.
+\bibitem{Link web} Link web7: \link{http://www.uns.edu.ar/cincuenta/amplia\_pricomp.htm}
 
-\bibitem{goossens}
-Michel Goossens, Frank Mittelbach, and Alexander Samarin,
-\newblock {\em The {\LaTeX} Companion},
-\newblock Addison-Wesley, Reading, MA, 1994.
+% \bibitem{lamport}
+% Leslie Lamport,
+% \newblock {\em A Document Preparation System: {\LaTeX} User's Guide and
+%   Reference Manual},
+% \newblock Addison-Wesley, Reading, MA, 2nd edition, 1994.
+% \newblock Be sure to get the updated version for \latexiie!
+
+% \bibitem{goossens}
+% Michel Goossens, Frank Mittelbach, and Alexander Samarin,
+% \newblock {\em The {\LaTeX} Companion},
+% \newblock Addison-Wesley, Reading, MA, 1994.
 
 \end{thebibliography}
 
@@ -104,7 +212,7 @@ NO se sabe despues veremos.
 \end{biography}
 
 
-\begin{biography}{Picco, Gonzalo Mart\'in} 
+\begin{biography}[gon.png]{Picco, Gonzalo Mart\'in} 
 Despues veremos
 \end{biography}
 
