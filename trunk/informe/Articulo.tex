@@ -21,10 +21,10 @@
 
 % \newcommand{\latexiie}{\LaTeX2{\Large$_\varepsilon$}}
 
-\usepackage[spanish]{babel}
+\usepackage[spanish,activeacute]{babel}
 \newcommand{\link}[1]{\textit{}{#1}}
 \usepackage[left=3.2cm,top=3.5cm,bottom=0.5cm,right=3.2cm]{geometry}
-
+% \hyphenate{ad-qui-si-ci\'on}
 \begin{document}
 \onecolumn
 % \sffamily
@@ -59,11 +59,11 @@
 \sloppy
 
 \begin{abstract} 
-Los desarrollos y avances inform\'aticos de Argentina siempre estuvieron intimamente relacionados con la situaci\'on pol\'itica que se estaba atravezando.La gran cantidad de gobiernos militares imposibilitaron, en muchos momentos, los acanves de una gran cantidad de proyectos. La llegada de la primera computadora, Clementina, a la Universidad de Buenos Aires se encuentra en uno de los acontesimientos mas impostantes de la computaci\'on en el pais, muchos aseguran que \'este marc\'o el nacimiendo de los desarrollos informaticos en Argentina.
+Los desarrollos y avances inform\'aticos de Argentina siempre estuvieron intimamente relacionados con la situaci\'on pol\'itica que se estaba atravezando. La gran cantidad de gobiernos militares imposibilitaron, en muchos momentos, los acanves de una gran cantidad de proyectos. La llegada de la primera computadora, Clementina, a la Universidad de Buenos Aires se encuentra en uno de los acontesimientos mas impostantes de la computaci\'on en el pais, muchos aseguran que \'este marc\'o el nacimiendo de los desarrollos informaticos en Argentina.
 
-Dentro de los desarrollos inform\'aticos propios m\'as importantes se encuentran el Computador electr\'onico de la Universidad Nacional del Sur (CEUNS), llevado a cabo por Jorge Santos y el Computador electr\'onico de la Facultad de Ingenier\'ia de Buenos Aires (CEFIBA), al mando de Ciancanglini. Si bien estos proyectos no obtuvieron el desarrollo de hardware que se esperaba, promovieron el nacimiento de grupos de investigaci\'on de muy destacados para la ciencia inform\'aticas. A nivel industrial, nuestro pais no se encuentra entre los paises productores de instrumentos digitales, pero existieron grandes proyectos de empresas nacionales como fueron el caso de FATE S.A......... 
-Actualmente, las carreras tecnol\'ogicas, como es el caso de las de la computaci\'on forman parte de una de los pilares mayormente abordados entre los objetivos de los planes politicos, entre ellos se pueden nombrar gran cantidad de becas de incentivo, de doctorado, organismos como el CONICET. \footnote{Algunas de ellas son becas TICs, becas bicentenario, becas de parte del Cordoba Ciencias, entre otras. Ademas encontramos muchas becas en el \'ambito
-privado, como las empresas INTEL, Microsoft, Oracle, etc.}
+Dentro de los desarrollos inform\'aticos propios m\'as importantes se encuentran el Computador electr\'onico de la Universidad Nacional del Sur (CEUNS), llevado a cabo por Jorge Santos y el Computador electr\'onico de la Facultad de Ingenier\'ia de Buenos Aires (CEFIBA), al mando de Ciancanglini. Si bien estos proyectos no obtuvieron el desarrollo de hardware que se esperaba, promovieron el nacimiento de grupos de investigaci\'on de muy destacados para la ciencia inform\'aticas. A nivel industrial, nuestro pais no se encuentra entre los paises productores de instrumentos digitales, pero existieron grandes proyectos de empresas nacionales como fueron el caso de FATE S.A.........
+ 
+Actualmente, las carreras tecnol\'ogicas, como es el caso de las de computaci\'on, forman parte de uno de los pilares m\'as abordados, entre los objetivos de los planes politicos. Entre ellos se pueden nombrar gran cantidad de becas de incentivo, de doctorado, organismos como el CONICET. \footnote{Algunas de ellas son becas TICs, becas bicentenario, becas de parte del Cordoba Ciencias, entre otras. Ademas encontramos muchas becas en el \'ambito privado, como las empresas INTEL, Microsoft, Oracle, etc.}
 \end{abstract}
 
 % \begin{keywords}
@@ -72,34 +72,37 @@ privado, como las empresas INTEL, Microsoft, Oracle, etc.}
 %----------------------------------------------------------------------
 % SECTION: Introduction
 %----------------------------------------------------------------------
-\section{Introduction}
+\section{Introducci\'on}
 
 Como parte de la sociedad nacida desde la d\'ecada del 80, tenemos una visi\'on bastante lejana de los comienzos de los dispositivos electr\'onicos a los que denominamos “computadoras”. Para muchos de nosotros estos instrumentos digitales han pasado a ser una parte indispensable de nuestra vida social, laboral, de esparcimiento, y como uno de los medios m\'as comunes para comunicarnos con los dem\'as. La era digital en la cual estamos inmersos nos imposibilita imaginarnos un d\'ia sin ellos. 
-Seguramente, la mayor\'ia, como en nuestro caso, adquiri\'o su primera computadora con car\'acteristicas aproximadas a 8 Mb de memoria, un procesador de 200 Mhz, un disco de almacenamiento de un par de Gigas, un monitor CRT de 15 pulgadas. Estas caracter\'isticas que al momento de la adquisici\'on, los vendedores nos aseguraban que ten\'iamos para muchos a\~nos venideros, al pasar el tiempo se convirtieron en carromatos electr\'oniocs s\'uper obsoletos, actualmente hablando. Esto debido al crecimiento masivo y continuo que se est\'a dando en los \'ultimos a\~nos.
-Este comportamiento, fue anticipado y enunciado en la Ley de Gordon E. Moore \footnote{\link{http://es.wikipedia.org/wiki/Ley\_de\_Moore}}, la cual sigue y seguir\'a teniendo vigencia pareciera por muchos a\~nos m\'as. Esto genera que renovar nuestros equipos de computaci\'on, sea una tarea cada vez m\'as com\'un al pasar unos pocos pares de a\~nos de haberlos comprado.
+Seguramente, la mayor\'ia, como en nuestro caso, adquiri\'o su primera computadora con car\'acteristicas aproximadas a 8 Mb de memoria, un procesador de 200 Mhz, un disco de almacenamiento de un par de Gigas, un monitor CRT de 15 pulgadas. Estas caracter\'isticas que al momento de la adquisici\'on, los vendedores nos aseguraban que ten\'iamos para muchos a\~nos venideros, al pasar el tiempo se convirtieron en carromatos electr\'onicos s\'uper obsoletos, actualmente hablando. Esto debido al crecimiento masivo y continuo que se est\'a dando en los \'ultimos a\~nos.
+Este comportamiento, fue anticipado y enunciado en la Ley de Gordon E. Moore \footnote{La Ley de Moore expresa que aproximadamente cada 18 meses se duplica el n\'umero de transistores en un circuito integrado \cite{LeyMoore}}, la cual sigue y seguir\'a teniendo vigencia pareciera por muchos a\~nos m\'as. Esto genera que renovar nuestros equipos de computaci\'on, sea una tarea cada vez m\'as com\'un al pasar unos pocos pares de a\~nos de haberlos comprado.
+
 Si nos ubicamos en d\'ecadas anteriores al 80, observaremos que existen radicales diferencias desde nuestra perspectiva consumista.
-El nacimiento de las computadoras se remonta a la d\'ecada del 40, con objetivos puramente militares, ya que el mundo estaba inmerso en la Segundo Guerra Mundial (WWII), con el desarrollo de una computadora denominada Z3 \footnote{\link{http://en.wikipedia.org/wiki/Z3\_(computer)}}, en 1941, por parte cient\'ificos alemanes. Mientras que COLOSSUS \footnote{\link{http://en.wikipedia.org/wiki/Colossus\_computer}}, en 1944, fue desarrollada por los brit\'anicos para decodificar los mensajes cifrados de los alemanes. Casi al mismo tiempo, en los EEUU, en la Universidad de Pennsylvania, el modelo denominado ENIAC \footnote{\link{http://en.wikipedia.org/wiki/ENIAC)}} era puesto en marcha en 1946, financiada por la U. S. Army.
-Todas estas computadoras no respetaban el modelo de John von Neumann, matem\'atico h\'ungaro, que en 1945, en un informe sobre el dise\~no de la computadora EDVAC, propuso el concepto de programa almacenado, utilizando el mismo dispositivo de almacenamiento tanto para las instrucciones como para los datos. Luego denominada Arquitectura Von Neumann \footnote{\link{(http://en.wikipedia.org/wiki/Von\_Neumann\_architecture)}}, actualmente la mayor\'ia de computadoras modernas est\'an basadas en esta arquitectura.
-Por lo que la primera en respetarla, aunque no en su totalidad, fue la desarrollada por el Ballistic Research Laboratory (BRL), en EEUU, a la cual denominaron EDVAC \footnote{\link{(http://en.wikipedia.org/wiki/EDVAC)}}, la cual funcion\'o desde 1949 hasta 1961, demostrando un funcionamiento confiable.
+El nacimiento de las computadoras se remonta a la d\'ecada del 40, con objetivos puramente militares, ya que el mundo estaba inmerso en la Segundo Guerra Mundial (WWII), con el desarrollo de una computadora denominada Z3 \cite{z3}, en 1941, por parte cient\'ificos alemanes. Mientras que COLOSSUS \footnote{\link{http://en.wikipedia.org/wiki/Colossus\_computer}}, en 1944, fue desarrollada por los brit\'anicos para decodificar los mensajes cifrados de los alemanes. Casi al mismo tiempo, en los EEUU, en la Universidad de Pennsylvania, el modelo denominado ENIAC \footnote{Electronic Numerical Integrator And Computer \cite{eniac}} era puesto en marcha en 1946, financiada por la U. S. Army.
+Todas estas computadoras no respetaban el modelo de John von Neumann, matem\'atico h\'ungaro, que en 1945, en un informe sobre el dise\~no de la computadora EDVAC, propuso el concepto de programa almacenado, utilizando el mismo dispositivo de almacenamiento tanto para las instrucciones como para los datos. Luego denominada Arquitectura Von Neumann \cite{newmann}, actualmente la mayor\'ia de computadoras modernas est\'an basadas en esta arquitectura.
+Por lo que la primera en respetarla, aunque no en su totalidad, fue la desarrollada por el Ballistic Research Laboratory (BRL), en EEUU, a la cual denominaron EDVAC \footnote{Electronic Discrete Variable Automatic Computer \cite{edvac}}, la cual funcion\'o desde 1949 hasta 1961, demostrando un funcionamiento confiable.
 Pero hasta ese momento, el acceso a las computadoras estaba restringido a cient\'ificos, ingenieros electr\'onicos y personal especializado, no solamente por sus usos militares, sino tambi\'en porque su operaci\'on era a niveles muy cercanos al hardware. Adem\'as, de que estas computadoras necesitaban un espacio f\'isico muy significativo, un consumo el\'ectrico considerable y un mantenimiento constante.
 As\'i mismo, a nivel acad\'emico hubo grandes avances en esta materia en paralelo. En la Universidad de Manchester bajo la direcci\'on de Tom Kilburn, se llev\'o a cabo el Proyecto “Manchester Small Scale Experimental Machine” (SSEM), que ten\'ia como prop\'osito construir una computadora o un prototipo, que respetara la arquitectura von Neumann. El 21 de junio de 1948, se ejecut\'o con \'exito el primer programa almacenado, en la computadora producto de este proyecto, a la cual se denomin\'o BABY.
-Despu\'es de estos trabajos a nivel experimental, se contrat\'o a la la firma brit\'anica Ferranti (http://en.wikipedia.org/wiki/Ferranti), para que fabricara industrialmente y comercializara una computadora a la cual se denomin\'o Manchester Mark I \footnote{\link{(http://en.wikipedia.org/wiki/Manchester\_Mark\_1)}}.
+Despu\'es de estos trabajos a nivel experimental, se contrat\'o a la la firma brit\'anica Ferranti \cite{ferranti}, para que fabricara industrialmente y comercializara una computadora a la cual se denomin\'o Manchester Mark I \cite{mark1}.
 Posteriormente, Ferranti construy\'o el modelo Ferranti Mark I que usaba n\'ucleos magn\'eticos para los registros. A este modelo le siguieron la Ferranti Mark II y luego la Mercury Ferranti (1956), esta \'ultima es el nexo de la computaci\'on con la Argentina.
-En la d\'ecada del 60, la Universidad de Buenos Aires (UBA), por iniciativa y gesti\'on del Dr. Manuel Sadosky \footnote{\link{(http://es.wikipedia.org/wiki/Manuel\_Sadosky)}}, compr\'o la primera computadora de la Argentina. Sadosky fue un matem\'atico y cient\'ifico argentino considerado por muchos como el “padre de la computaci\'on en la Argentina”. Adem\'as en 1962 impuls\'o la creaci\'on del Instituto de C\'alculo, as\'i como tambi\'en la carrera de Computador Cient\'ifico.
-Las negociaciones para la adquisici\'on de esta computadora comenzaron en 1958. El modelo elegido fue una Mercury Ferranti, luego de una licitaci\'on a la cual se presentaron IBM, Remington y Philco de los Estados Unidos y Ferranti de Inglaterra. Esta elecci\'on, seg\'un Sadosky: “Para la \'epoca se trataba de una m\'aquina de excelente categor\'ia t\'ecnica no s\'olo por su rapidez y tipo de memoria, sino tambi\'en porque el grupo de investigadores de la Universidad de Manchester hab\'ia desarrollado un lenguaje, Autocode, de f\'acil aprendizaje y de buenas caracter\'isticas para el tratamiento de problemas cient\'ificos”.
+
+En la d\'ecada del 60, la Universidad de Buenos Aires (UBA), por iniciativa y gesti\'on del Dr. Manuel Sadosky \cite{sadosky}, compr\'o la primera computadora de la Argentina. Sadosky fue un matem\'atico y cient\'ifico argentino considerado por muchos como el "padre de la computaci\'on en la Argentina".
+Las negociaciones para la adquisici\'on de esta computadora comenzaron en 1958. El modelo elegido fue una Mercury Ferranti, luego de una licitaci\'on a la cual se presentaron IBM, Remington y Philco de los Estados Unidos y Ferranti de Inglaterra. Esta elecci\'on, seg\'un Sadosky: "Para la \'epoca se trataba de una m\'aquina de excelente categor\'ia t\'ecnica no s\'olo por su rapidez y tipo de memoria, sino tambi\'en porque el grupo de investigadores de la Universidad de Manchester hab\'ia desarrollado un lenguaje, Autocode, de f\'acil aprendizaje y de buenas caracter\'isticas para el tratamiento de problemas cient\'ificos".
 Se puede decir que la llegada de esta computadora, a la cual llamaron CLEMENTINA  debido a que al arrancar emit\'ia pitidos que se asemejaban a la melod\'ia del folk Clementine, marc\'o el nacimiento de las investigaciones entorno a la computadora en Argentina.
-A su vez, cuando ya exist\'ia una masa de profesionales formados en electr\'onica digital, se encararon proyectos para construir computadoras \'integramente dentro de nuestro pa\'is. Muchos de ellos hab\'ian tenido contacto con grupos, como el de la Universidad de Manchester, fueron fundamentales en estos proyectos. La CEFIBA en la UBA, dirigida por el Ing. Humberto Ciancaglini y CEUNS en la Universidad del Sur (UNS), de la mano del Ing. Jorge Santos, fueron dos prototipos de computadoras que en el exterior y en carreras La UBA y la UNS construyen sendos prototipos de computadoras que generaron mucho m\'as que hardware, sino tambi\'en la formaci\'on de recursos humanos especializados en computaci\'on digital.
+Sadosky, en 1962, impuls\'o la creaci\'on del Instituto de C\'alculo, as\'i como tambi\'en la carrera de Computador Cient\'ifico.
+
+Cuando ya exist\'ia una masa de profesionales formados en electr\'onica digital, se encararon proyectos para construir computadoras \'integramente dentro de nuestro pa\'is. Muchos de ellos hab\'ian tenido contacto con grupos, como el de la Universidad de Manchester, fueron fundamentales en estos proyectos. La CEFIBA en la UBA, dirigida por el Ing. Humberto Ciancaglini y CEUNS en la Universidad del Sur (UNS), de la mano del Ing. Jorge Santos, fueron dos prototipos de computadoras que en el exterior y en carreras La UBA y la UNS construyen sendos prototipos de computadoras que generaron mucho m\'as que hardware, sino tambi\'en la formaci\'on de recursos humanos especializados en computaci\'on digital.
 
 %----------------------------------------------------------------------
 % SECTION: Desarrollos
 %----------------------------------------------------------------------
 \section{Proyectos Acad\'emicos}
 \begin{quote}
-Aca podemos hablar un poco introduciendo a lo que viene.
+Luego de la Segunda Guerra Mundial (WWII\footnote{Deriva de las sigla en ingles World War II}), en donde se vio la importancia de la aplicaci\'on de t\'ecnicas digitales sobre diversos campos, la computaci\'on cobr\'o m\'as relevancia. En la Argentina, muchos profesionales y cient\'ificos formados en las universidades nacionales, estuvieron radicados en Europa en laboratorios y centros que se dedican a la fabricaci\'on de computadores digitales. Esa interacci\'on, provoc\'o que a partir de 1958 se proyectaran construcci\'ones de peque\~nas computadoras electr\'onicas digitales, como son CEFIBA y CEUNS.
 \end{quote}
 
 \subsection*{CEFIBA}
-Luego de la Segunda Guerra Mundial (WWII), en donde se vio la importancia de la aplicaci\'on de t\'ecnicas digitales sobre diversos campos, la computaci\'on cobr\'o m\'as relevancia. En la Argentina, muchos profesionales y cient\'ificos formados en las universidades nacionales, estuvieron radicados en Europa en laboratorios y centros que se dedican a la fabricaci\'on de computadores digitales. Esa interacci\'on, provoc\'o que en 1958 se proyectara la construcci\'on de una peque\~na computadora electr\'onica digital, a la que denominaron CEFIBA (Computadora Electr\'onica de la Facultad de Ingenier\'ia de la Universidad de Buenos Aires). 
 
 En la d\'ecada del 30, Argentina exist\'ian industrias dedicadas a la fabricaci\'on de transistores, utilizados en la elaboraci\'on de equipos de radio de poca potencia. Mientras que las v\'alvulas, eran importadas de Europa o EEUU. Al estallar la WWII, las importaciones se cortaron en su totalidad, por lo que surgi\'o la necesidad de cubrir ese faltante de v\'alvulas en la industria. As\'i que, empresas como SAIRA (Sociedad An\'onima de Industriales de la Rep\'ublica Argentina) y la holandesa Philips, comenzaron a desarrollar, en una primera instancia, v\'alvulas electr\'onicas de recepci\'on y luego de mediana y alta potencia, cubriendo las necesidades del mercado.
 
@@ -143,13 +146,11 @@ Como bien dijo Santos el proyecto CEUNS no solo significo un computador, sino ta
 % SECTION: Proyectos comerciales
 %----------------------------------------------------------------------
 \section{Proyectos comerciales}
-Podriamo poner algo para introducir.
+A partir de la decada del 70, la industria nacional incremento......
 
-\subsection*{Serie 1000}
+\subsection*{SERIE 1000}
 Este fue uno de los primeros proyectos ambiciosos de una industria argentina en el campo de la computaci\'on digital. El responsable fue la Divisi\'on Electr\'onica  de FATE S.A., en la cual se desempe\~naba como Gerente General el Ing. Roberto Zubieta.
-El proyecto que tuvo vigencia desde 1973 al 1976, consisti\'o principalmente en el dise\~no, desarrollo, producci\'on y
-comercializaci\'on de un minicomputador de porte medio, abarcando su hardware y software. Adem\'as, fue un esfuerzo pionero en la materia en toda Am\'erica Latina, por parte de una empresa de capitales nacionales con tecnolog\'ia generada internamente en los componentes centrales del producto. Buscaba competir en el mercado con los sistemas importados, por lo que se pretendi\'o que fuera una
-computadora al ``\textit{estado del arte}'' del momento.
+El proyecto que tuvo vigencia desde 1973 al 1976, consisti\'o principalmente en el dise\~no, desarrollo, producci\'on y comercializaci\'on de un minicomputador de porte medio, abarcando su hardware y software. Adem\'as, fue un esfuerzo pionero en la materia en toda Am\'erica Latina, por parte de una empresa de capitales nacionales con tecnolog\'ia generada internamente en los componentes centrales del producto. Buscaba competir en el mercado con los sistemas importados, por lo que se pretendi\'o que fuera una computadora al ``\textit{estado del arte}'' del momento.
 
 La empresa estim\'o la cantidad de sistemas de la Serie 1000 a ser provistos, durante el per\'iodo 1977-1981, en 12, 19, 28, 33 y 35,
 respectivamente, instalaciones anuales.
@@ -165,10 +166,41 @@ Las principales caracter\'isticas del hardware fueron:
 \item Otros perif\'ericos: El sistema admit\'ia otros perif\'ericos adecuados para sus objetivos de mercado y para el adecuado desempe\~no del mismo.
 \end{itemize}
 
+\subsection*{SERIE CZ}
+
+Otra empresa que se destaca en desarrollos de computadoras a niveles industriales y que fue un hito en nuestro pa/'is es CZERWENY. En 1958 Tadeo Czerweny, comienza fabricando de motores el/'ectricos en la cuidad de Paran/'a , Provincia de Entre R/'ios. Durante los a/~nos 70, expande su empresa a/~nadi/'endole una divisi/'on electr/'onica. Sus primeros proyectos fueron el desarrollo de calculadoras electr/'onicas, hasta que en 1982 dirigi/'o sus esfuerzos al mercado de los nuevos ordenadores personales. Tomaron la decisi/'on de lanzar una serie de computadores, denominadas Serie CZ, que eran clones de las SINCLIAR famosas internacionalmente, dise/~nadas por Sir Clive Marles Sinclair \cite{cinclair}.
+La gamma de productos ofrecidos no dispon/'ian de monitor y se ten/'ian que conectar a un televisor. Todos los modelos fabricados fueron:
+\begin{itemize}
+
+\item CZ-1000: es el equivalente a la versi/'on realizada por Timex-Sinclair TS-1000. Fue fabricada en Portugal. Tanto la carcaza como la motherboard, eran originales tra/'idas por importaci/'on. Ten/'ia un procesador Z80A de 8 bits a 3,25 Mhz, 2Kb de RAM expandible a 16 KB y una memoria ROM de 8 Kb. Dispon/'ia de un teclado de 40 teclas y se utilizaba el Sinclair Basic, de 37 funciones y 34 comandos.
+Luego se lanz/'o en 1986 la CZ-1000 Plus, que a diferencia su antecesora, ten/'ia m/'as RAM y conectores para m/'as perif/'ericos.
+
+\item CZ-1500: siguiendo los modelos comercializados por la firma Timex-Sinclair, este modelo era igual a la TS-1500. Sus caracter/'isticas era iguales a la CZ-1000, pero a diferencia ven/'ia con 16Kb de RAM ampliable a 48Kb.
+Al igual que la CZ-1000, este modelo tambi/'en fue actualizado con lo cual se comercializ/'o la computadora CZ-1500 Plus.
+
+Ambos modelos ten/'ian una resoluci/'on de 64 x 44 p/'ixeles en blanco y negro.
+
+\item CZ-2000: este modelo a diferencia de los anteriores, fue clon de un producto de Timex-Sinclair que nunca comercializ/'o, la TS-2000. Su gran innovaci/'on fue la incorporaci/'on de un modo gr/'afico de 256 x 144 p/'ixeles con 8 colores. Ten/'ia 48Kb de RAM, 16Kb de ROM y un parlante interno.
+
+\item CZ-Spectrum: en 1984 irrumpe en el mundo la ZX Spectrum, en por lo que Czerweny comienza a comercializar el modelo m/'as poderoso de la Serie CZ. Sus mejoras fueron la incorporaci/'on de un bot/'on de Reset, dos conectores para Joystick y una salida directa para monitor.
+Posteriormente, la empresa lanzar/'ia su /'ultimo modelo, la CZ-Spectrum Plus, junto a un set de accesorios como cassettes con software y dos modelos de joysticks compatibles con varios productos de la Serie CZ, estos fueron los denominados CZ-800 y CZ-800S.
+
+\end{itemize}
+En 1990, Czerweny cesa toda actividad, debido entre otras cosas a un gran incendio en su planta en Paran/'a, pero el motivo m/'as probable es que su tecnolog/'ia no era compatible con los nuevos standares IBM que prevalecen hasta hoy.
+
 %----------------------------------------------------------------------
 % SECTION: Estado del arte
 %----------------------------------------------------------------------
 \section{Estado del arte}
+Las secciones despues veremos que tal
+
+%----------------------------------------------------------------------
+% SECTION: Desarrollos ficticios
+%----------------------------------------------------------------------
+\section{Desarrollos ficticios}
+Durante la d/'ecada del 90 debido a ..
+
+
 Las secciones despues veremos que tal
 
 %----------------------------------------------------------------------
@@ -188,9 +220,17 @@ Las secciones despues veremos que tal
 \begin{thebibliography}{1}
 
 \bibitem{babini} Jos\'e Babini La llegada de la computadora a la argentina.
-\bibitem {santos} Entrevista Jorge Santos.
+\bibitem{santos} Entrevista Jorge Santos.
 \bibitem{Link web} Link web7: \link{http://www.uns.edu.ar/cincuenta/amplia\_pricomp.htm}
-
+\bibitem{LeyMoore} Ley de Moore, articulo Enciclopedia online Wikipedia -\link{http://es.wikipedia.org/wiki/Ley\_de\_Moore}
+\bibitem{z3} Computador Z3, articulo Enciclopedia online Wikipedia - \link{http://en.wikipedia.org/wiki/Z3\_(computer)}
+\bibitem{eniac} Computador ENIAC, articulo Enciclopedia online Wikipedia - \link{http://en.wikipedia.org/wiki/ENIAC}
+\bibitem{newman} Arquitectura Von Neumann, articulo Enciclopedia online Wikipedia - \link{http://en.wikipedia.org/wiki/Von\_Neumann\_architecture}
+\bibitem{edvac} Computador EDVAC, articulo Enciclopedia online Wikipedia - \link{http://en.wikipedia.org/wiki/EDVAC}
+\bibitem{ferranti} Ferranti, articulo Enciclopedia online Wikipedia - \link{http://en.wikipedia.org/wiki/Ferranti}
+\bibitem{mark1} Manchester Mark 1, articulo Enciclopedia online Wikipedia - \link{http://en.wikipedia.org/wiki/Manchester\_Mark\_1}
+\bibitem{sadosky} Manuel Sadosky, articulo Enciclopedia online Wikipedia - \link{http://es.wikipedia.org/wiki/Manuel\_Sadosky}
+\bibitem{sinclair} Sir Clive Marles Sinclair, articulo Enciclopedia online Wikipedia - \link{http://en.wikipedia.org/wiki/Clive\_Sinclair}
 % \bibitem{lamport}
 % Leslie Lamport,
 % \newblock {\em A Document Preparation System: {\LaTeX} User's Guide and
@@ -212,7 +252,7 @@ NO se sabe despues veremos.
 \end{biography}
 
 
-\begin{biography}[gon.png]{Picco, Gonzalo Mart\'in} 
+\begin{biography}{Picco, Gonzalo Mart\'in} 
 Despues veremos
 \end{biography}
 
