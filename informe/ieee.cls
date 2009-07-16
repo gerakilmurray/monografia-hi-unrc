@@ -696,8 +696,8 @@
 
 % default definitions
 % -------------------
-\def\theevenhe@d{\footnotesize[\thepage] \hfil \leftmark\hbox{}}
-\def\theoddhe@d{\hbox{}\footnotesize\rightmark \hfil [\thepage]}
+\def\theevenhe@d{\footnotesize $<\thepage>$ \hfil \leftmark\hbox{}}
+\def\theoddhe@d{\hbox{}\footnotesize\rightmark \hfil $<\thepage>$}
 \def\theevenf@@t{}
 \def\theoddf@@t{}
 
@@ -818,7 +818,7 @@
   \edef\TODAY{\uppercase{\today}}
   \def\leftmark{\@journal\@titletext}\def\rightmark{\titl@line}
   \def\theeventphe@d{\footnotesize\thepage \hfil \leftmark\hbox{}}
-  \def\theoddtphe@d{\hbox{}\footnotesize\leftmark \hfil [\thepage]}
+  \def\theoddtphe@d{\hbox{}\footnotesize\leftmark \hfil $<\thepage>$}
   \if@technote % make header a little bigger
     \def\theevenhe@d{\small\thepage \hfil \leftmark\hbox{}}
     \def\theoddhe@d{\hbox{}\small\rightmark \hfil \thepage}
@@ -1271,16 +1271,16 @@ page \thepage \space undefined}}%
 \def\getpic#1{\sbox{\@tempboxa}{\includegraphics{#1}}%
 \newcount\tmpcta \tmpcta=\ht\@tempboxa%
 \newcount\tmpctb \tmpctb=\wd\@tempboxa%
-\divide\tmpctb by 100%
-\divide\tmpcta by\tmpctb%
-\ifnum\tmpcta>133%
-\typeout{ieee: Biography picture `#1' too tall.}%
-\frame{\hbox to 25mm{\hfil\resizebox{!}{32mm}{\usebox{\@tempboxa}}\hfil}}%
-\else \ifnum\tmpcta<123%
-\typeout{ieee: Biography picture `#1' too wide.}%
-\frame{\vbox to 32mm{\vss\hbox{\resizebox{25mm}{!}{\usebox{\@tempboxa}}}\vss}}%
+% \divide\tmpctb by 100%
+% \divide\tmpcta by\tmpctb%
+\ifnum\tmpcta>126%
+% \typeout{ieee: Biography picture `#1' too tall.}%
+ \frame{\hbox to 13mm{\hfil\resizebox{!}{20mm}{\usebox{\@tempboxa}}\hfil}}%
+\else \ifnum\tmpcta<126%
+% \typeout{ieee: Biography picture `#1' too wide.}%
+ \frame{\vbox to 20mm{\vss\resizebox{13mm}{!}{\usebox{\@tempboxa}}\vss}}%
 \else%
-\resizebox{25mm}{32mm}{\usebox{\@tempboxa}}
+\resizebox{23mm}{32mm}{\usebox{\@tempboxa}}
 \fi\fi}
 
 \long\def\biographyLyX#1{\if@non\else\begin{biography} #1\end{biography}\fi}
@@ -1289,7 +1289,7 @@ page \thepage \space undefined}}%
   \long\def\biography{}
 \else
   \long\def\biography{\@ifnextchar [{\@biographyb}{\@biographya[{\unitlength 
-  1mm\hbox{\framebox(25,32){}}}]}}
+  0mm\hbox{\framebox(25,32){}}}]}}
 \fi
 
 \long\def\@biographyb[#1]{\@biographya[\getpic{#1}]}
@@ -1298,8 +1298,9 @@ page \thepage \space undefined}}%
 \footnotesize\bigskip\bigskip\bigskip\parskip=0pt\par%
 \rule{0pt}{35mm}\vspace*{-35mm}\par%   garantees correct page breaking
 \begin{main@bio}[{#1}]%
-\noindent{\bf #2}%
+\noindent{\bf #2 }%
 }
+
 \def\endbiography{\if@non\else\end{main@bio}\egroup\fi}
 
 \long\def\main@bio[#1]{% #1 is the material for setting a graphic box
