@@ -25,6 +25,11 @@
 \newcommand{\link}[1]{\textit{}{#1}}
 \usepackage[left=3.2cm,top=3.5cm,bottom=0.5cm,right=3.2cm]{geometry}
 % \hyphenate{ad-qui-si-ci\'on}
+
+% para que no corte las palabras mal... no se si anda bien
+\pretolerance=500
+\tolerance=600
+
 \begin{document}
 \onecolumn
 % \sffamily
@@ -60,7 +65,7 @@ Los desarrollos y avances inform\'aticos de Argentina siempre estuvieron intimam
 
 La llegada de la primera computadora, Clementina, a la Universidad de Buenos Aires se considera uno de los acontecimientos m\'as importantes de la computaci\'on en nuestro pa\'is, muchos aseguran que dicho suceso marc\'o el nacimiento de los desarrollos inform\'aticos en Argentina.
 
-Dentro de los desarrollos inform\'aticos propios, m\'as importantes, se encuentran; el prototipo de la Facultad de Ingenier\'ia de la Universidad de Buenos Aires, al mando del Ing. Ciancanglini, el de la Universidad Nacional del Sur, llevado a cabo por Ing. Santos y constru\'ido en Bah\'ia Blanca, por el Ing. Escud\'e para la Armada Argentina.
+Dentro de los desarrollos inform\'aticos propios, m\'as importantes, se encuentran; el prototipo de la Facultad de Ingenier\'ia de la Universidad de Buenos Aires, al mando del Ing. Ciancanglini, el de la Universidad Nacional del Sur, llevado a cabo por Ing. Santos y el constru\'ido en Bah\'ia Blanca, por el Ing. Escud\'e para la Armada Argentina.
 
 A nivel industrial, existieron varios proyectos de empresas nacionales, que generaron muy buenos resultados, pero no perduraron mucho tiempo en el mercado. Algunas de ellos, forman parte de un objeto de colecci\'on para muchos fan\'aticos, como son el caso de equipos marca Czerweny, Telematica, entre otras. Estas computadoras pasaron de ser una herramienta de trabajo a ser un vestigio de la historia inform\'atica argentina.
  
@@ -93,7 +98,10 @@ Posteriormente, Ferranti construy\'o el modelo Ferranti Mark I que usaba n\'ucle
 En la d\'ecada del 60, la Universidad de Buenos Aires (UBA), por iniciativa y gesti\'on del Dr. Manuel Sadosky\cite{sadosky}, adquiri\'o la primera computadora de la Argentina.
 Las negociaciones para la adquisici\'on de esta computadora comenzaron en 1958. El modelo elegido fue una Mercury Ferranti, luego de una licitaci\'on a la cual se presentaron IBM, Remington y Philco de los Estados Unidos y Ferranti de Inglaterra. Esta elecci\'on, seg\'un Sadosky: ``Para la \'epoca se trataba de una m\'aquina de excelente categor\'ia t\'ecnica no s\'olo por su rapidez y tipo de memoria, sino tambi\'en porque el grupo de investigadores de la Universidad de Manchester hab\'ia desarrollado un lenguaje, Autocode, de f\'acil aprendizaje y de buenas caracter\'isticas para el tratamiento de problemas cient\'ificos''.
 
-\begin{center}\includegraphics[width=200pt, height=153pt]{clementina.png}\end{center}
+% \begin{figure}
+\begin{center}\includegraphics[width=199pt, height=161pt]{clementina.png}\end{center} %imagen al 30 %
+% \caption{Modelo Mercury Ferranti: Clementina}
+% \end{figure}
 
 Se puede decir que la llegada de esta computadora, a la cual llamaron \textit{Clementina}\footnote{Este nombre surgi\'o debido a que al arrancar emit\'ia pitidos que se asemejaban a la melod\'ia del folk Clementine} marc\'o el nacimiento de las investigaciones entorno a la computadora en Argentina.
 Sadosky fue un matem\'atico y cient\'ifico argentino, considerado por muchos como el ``padre de la computaci\'on en la Argentina''.
@@ -108,7 +116,7 @@ Cuando ya exist\'ia una masa de profesionales formados en electr\'onica digital,
 
 El estudio de los or\'igenes de la computadora computadora nos permite conocer cu\'ales fueron los factores sociales y tecnol\'ogicos que llevaron al hombre a crearla y modificarla hasta alcanzar el vertiginoso de desarrollo que tiene actualmente. El advenimiento de la Segunda Guerra Mundial (WWII\footnote{Deriva de las sigla en ingles World War II}) aceler\'o este proceso, en donde se vio la importancia de la aplicaci\'on de t\'ecnicas digitales sobre diversos campos y la computaci\'on cobr\'o m\'as relevancia. En la Argentina, muchos profesionales y cient\'ificos formados en las universidades nacionales, estuvieron radicados en Europa, en laboratorios y centros dedicados a la fabricaci\'on de computadores digitales. 
 
-Esa interacci\'on, provoc\'o que a partir de 1958 se proyectaran construcci\'ones de peque\~nas computadoras electr\'onicas digitales, como son CEFIBA y CEUNS.
+Esa interacci\'on, provoc\'o que a partir de 1958 se proyectaran construcci\'ones de peque\~nas computadoras electr\'onicas digitales, como son CEFIBA y CEUNS en primer momento y luego la ARGENTA a mediados de la decada de los 70.
 
 \subsection*{CEFIBA}
 
@@ -307,7 +315,7 @@ Hasta hace unos pocos a\~nos el mercado interno de la Argentina, estaba acostumb
 
 La empresa nacional Novatech Solutions S.A. radicada en Buenos Aires, inici\'o sus actividades en abril del 2005. Siendo la \'unica en su tipo en nuestro pa\'is y s\'olamente la segunda en toda Am\'erica del Sur. Novatech se especializa en la fabricaci\'on y comercializaci\'on de m\'odulos de memorias RAM, pen drives y flash media para Desktop, Notebook y Workstations Servers. Comenz\'o sus actividades con una visi\'on de cubrir las grandes necesidades de stock del mercado local, pero ya ha logrado exportar sus productos en todo el MercoSur\footnote{Mercado Com\'un del Sur\cite{mercosur}}.
 
-\begin{center}\includegraphics[width=300pt, height=152pt]{novatech.png}\end{center}
+\begin{center}\includegraphics[width=200pt, height=102pt]{novatech.png}\end{center}%la imagen esta al 66.67%
 
 Adem\'as ofrece abastecimiento local y servicio t\'ecnico a sus clientes para la reparaci\'on, testeo y programaci\'n de toda clase de memorias, incluso de otras marcas. En su l\'inea de producci\'on utiliza tecnolog\'ia de montaje sobre superficie SMT (Surface Mount Technology). Cuenta con ensambladoras autom\'aticas Suzuki de 4 cabezas, y equipamiento de control de calidad de \'ultima generaci\'on para la fabricaci\'on de m\'odulos de memoria para distintas plataformas. La empresa, tambi\'en, posee una l\'inea completa de producci\'on para la l\'inea Flash, que consiste en un ``High Speed Flexible Mounter'' y un horno de soldadura con dispositivos autom\'aticos, dos selladoras, una impresora Ink Jet, una etiquetadora autom\'atica y un router de corte.
 
