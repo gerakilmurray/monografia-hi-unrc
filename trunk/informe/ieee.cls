@@ -876,7 +876,7 @@ page \thepage \space undefined}}%
     {\hss[\arabic{enumi}]}{\settowidth\labelwidth{[#1]}\leftmargin\labelwidth
     \advance\leftmargin\labelsep \itemsep 0pt plus .5pt
     \usecounter{enumi}}
-    \def\newblock{\hskip .11em plus .33em minus .07em}
+    \def\newblock{\hskip .11em plus .33em minus .08em}
     \sloppy\clubpenalty4000\widowpenalty4000
     \sfcode`\.=1000\relax
     \ifev@l\else\normalsize\fi %added by GLP

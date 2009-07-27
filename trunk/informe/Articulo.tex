@@ -1,13 +1,13 @@
 \documentclass[%
 % 	draft,
-	%submission,
-% 	compressed,
- 	final,
+% 	submission,
+%  	compressed,
+  	final,
 	%
-	%technote,
-	%internal,
+% 	technote,
+% 	internal,
 	%submitted,
-	%inpress,
+% 	inpress,
 %	reprint,
 %
 % 	titlepage,
@@ -22,9 +22,17 @@
 % \newcommand{\latexiie}{\LaTeX2{\Large$_\varepsilon$}}
 
 \usepackage[spanish,activeacute]{babel}
-\newcommand{\link}[1]{\textit{}{#1}}
+\newcommand{\link}[1]{\textit{#1}}
+
+
 \usepackage[left=3.2cm,top=3.5cm,bottom=0.5cm,right=3.2cm]{geometry}
 % \hyphenate{ad-qui-si-ci\'on}
+
+% item bibliografico autor, titulo, descripcion
+\newcommand{\ibiblio}[3]{
+	\uppercase{#1} - \textbf{``#2''}, \link{#3}.
+}
+
 
 % para que no corte las palabras mal... no se si anda bien
 \pretolerance=500
@@ -42,8 +50,8 @@
 % MAKE SURE THERE ARE NO SPACES BEFORE A \member OR \authorinfo
 % COMMAND (this also means `don't break the line before these
 % commands).
-\author{\textbf{Kilmurray}, \textit{Gerardo Luis} \hspace{4cm} \textbf{Picco}, \textit{Gonzalo Mart\'in}\\
-        \small{\textit{gerakilmurray@gmail.com}}  \hspace{5.5cm}  \small{\textit{gonzalopicco@gmail.com}} \\ [0.5cm] 
+\author{\textbf{Ac. Kilmurray}, \textit{Gerardo Luis$^{A}$}\footnote{\textbf{A-} Departamento de Computaci\'on, Facultad de Ciencias Exactas, F\'isico-Qu\'imica y Naturales, Univ. Nac. R\'io Cuarto - Email: \small{\textit{gerakilmurray@gmail.com}} - Direcci\'on Postal: X5808DPH.} \hspace{4cm} \textbf{Ac. Picco}, \textit{Gonzalo Mart\'in$^{B}$}\footnote{\textbf{B-} Departamento de Computaci\'on, Facultad de Ciencias Exactas, F\'isico-Qu\'imica y Naturales, Univ. Nac. R\'io Cuarto - Email: \small{\textit{gonzalopicco@gmail.com}} - Direcci\'on Postal: X5800DNJ Piso 3 Depto 6.}\\[1cm]
+%         \small{\textit{gerakilmurray@gmail.com}}  \hspace{5.5cm}  \small{\textit{gonzalopicco@gmail.com}} \\ [0.5cm] 
 	\large \textbf{Universidad Nacional de R\'io Cuarto}\\ \textit{Departamento de Computaci\'on}\\[1cm]
 	} 
 
@@ -85,7 +93,7 @@ Seguramente, la mayor\'ia, como en nuestro caso, adquiri\'o su primera computado
 Este comportamiento, fue anticipado y enunciado en la Ley de Gordon E. Moore\footnote{La Ley de Moore expresa que aproximadamente cada 18 meses se duplica el n\'umero de transistores en un circuito integrado\cite{LeyMoore}}; la cual, pareciera, sigue y seguir\'a teniendo vigencia por muchos a\~nos m\'as. Esto genera que renovar nuestros equipos de computaci\'on, sea una tarea cada vez m\'as com\'un al pasar unos pocos pares de a\~nos.
 
 Si nos ubicamos en d\'ecadas anteriores al 80, observaremos que existen radicales diferencias desde nuestra perspectiva consumista.
-El nacimiento de las computadoras se remonta a la d\'ecada del 40, con objetivos puramente militares, ya que el mundo estaba inmerso en la Segundo Guerra Mundial (WWII), con el desarrollo de una computadora denominada Z3\cite{z3}, en 1941, por parte cient\'ificos alemanes. Mientras que Colossus\footnote{\link{http://en.wikipedia.org/wiki/Colossus\_computer}}, en 1944, fue desarrollada por los brit\'anicos para decodificar los mensajes cifrados de los alemanes. Casi al mismo tiempo, en los EEUU, en la Universidad de Pennsylvania, el modelo denominado ENIAC\footnote{Electronic Numerical Integrator And Computer\cite{eniac}} era puesto en marcha en 1946, financiada por la U.S. Army.
+El nacimiento de las computadoras se remonta a la d\'ecada del 40, con objetivos puramente militares, ya que el mundo estaba inmerso en la Segundo Guerra Mundial (WWII), con el desarrollo de una computadora denominada Z3\cite{z3}, en 1941, por parte cient\'ificos alemanes. Mientras que Colossus\cite{colosus}, en 1944, fue desarrollada por los brit\'anicos para decodificar los mensajes cifrados de los alemanes. Casi al mismo tiempo, en los EEUU, en la Universidad de Pennsylvania, el modelo denominado ENIAC\footnote{Electronic Numerical Integrator And Computer\cite{eniac}} era puesto en marcha en 1946, financiada por la U.S. Army.
 
 Ninguna de estas computadoras respetaba el modelo de John von Neumann, matem\'atico h\'ungaro, que en 1945, en un informe sobre el dise\~no de la computadora EDVAC, propuso el concepto de programa almacenado, utilizando el mismo dispositivo de almacenamiento tanto para las instrucciones como para los datos. Luego denominada Arquitectura Von Neumann\cite{newman}, actualmente la mayor\'ia de computadoras modernas est\'an basadas en esta arquitectura.
 La primera en respetarla, aunque no en su totalidad, fue la desarrollada por el Ballistic Research Laboratory (BRL), en EEUU, a la cual denominaron EDVAC\footnote{Electronic Discrete Variable Automatic Computer\cite{edvac}}, la misma funcion\'o desde 1949 hasta 1961, demostrando un funcionamiento confiable.
@@ -221,8 +229,9 @@ Las principales caracter\'isticas del hardware fueron:\\
 \subsection*{SERIE CZ}
 
 Otra empresa que se destac\'o en desarrollos de computadoras a nivel industrial y que fue un hito en nuestro pa\'is es \textit{Czerweny}. En 1958 Tadeo Czerweny, comienza fabricando motores el\'ectricos en la cuidad de Paran\'a, Provincia de Entre R\'ios. Durante los a\~nos 70, expande su empresa a\~nadi\'endole una divisi\'on electr\'onica. Sus primeros proyectos fueron el desarrollo de calculadoras electr\'onicas, hasta que en 1982 dirigi\'o sus esfuerzos al mercado de los nuevos ordenadores personales. Tomaron la decisi\'on de lanzar una serie de computadores, denominadas Serie CZ, que eran clones de las \textit{Sinclair}, famosas internacionalmente, dise\~nadas por Sir Clive Marles Sinclair \cite{sinclair}.
-La gamma de productos ofrecidos no dispon\'ian de monitor y se ten\'ian que conectar a un televisor. 
+La gamma de productos ofrecidos no dispon\'ian de monitor y se ten\'ian que conectar a un televisor.\\  
 
+\begin{center}\includegraphics[width=360pt, height=120pt]{serieCZ.png}\end{center}
 Todos los modelos fabricados fueron:\\
 
 \begin{itemize}
@@ -241,7 +250,7 @@ Ambos modelos ten\'ian una resoluci\'on de 64 x 44 p\'ixeles en blanco y negro.\
 Posteriormente en 1986, la empresa lanzar\'ia su \'ultimo modelo, la CZ-Spectrum Plus, junto a un set de accesorios como cassettes con software y dos modelos de joysticks compatibles con varios productos de la Serie CZ, estos fueron los denominados CZ-800 y CZ-800S.\\
 \end{itemize}
 
-\begin{center}\includegraphics[width=360pt, height=120pt]{serieCZ.png}\end{center}
+% \begin{center}\includegraphics[width=360pt, height=120pt]{serieCZ.png}\end{center}
 
 En 1990, Czerweny cesa toda actividad, debido entre otras cosas a un gran incendio en su planta en Paran\'a, pero el motivo m\'as probable es que su tecnolog\'ia no era compatible con los nuevos est\'andares IBM que prevalecen hasta la acutalidad.
 
@@ -309,7 +318,8 @@ Actualmente se encuentran en nuestro pa\'is sucursales de empresas de importanci
 
 Una empresa de capitales nacionales que se destaca y podemos mencionar como unos de los pocos ejemplos reales de desarrollo de hardware es \textit{Novatech}.
 
-\subsection*{Memorias Novatech}
+\begin{quote}
+\textbf{Memorias Novatech}
 
 Hasta hace unos pocos a\~nos el mercado interno de la Argentina, estaba acostumbrado a adquirir, de empresas multinacionales, m\'odulos de memoria de tipo RAM para computadoras. Esta situaci\'on hac\'ia que las mismas se enfrentaran a problemas como la falta de stock o la poca rapid\'es con la que respond\'ian a sus pedidos.
 
@@ -325,7 +335,7 @@ Al igual que Kingston\footnote{Kingston Technology Company\cite{kingston}}, el f
 
 Novatech se encuentra entre los \'unicos desarrollos nacionales de hardware, y es reconocida por sus productos de alta calidad.
 
-\subsection*{}
+\end{quote}
 Con respecto a la parte acad\'emica y de investigaci\'on, la rama de la computaci\'on atraviesa un momento plagado de planes de incentivo. Los mismos se deben a programas de becas por parte del gobierno como becas Tics, PNBU, Bicentenario y de empresas privadas, entre las cuales podemos mencionar las becas a la excelencia de \textit{Intel} y apoyo econo\'omico (sponsors) a escuelas de informaticas (como la RIO) de empresas como \textit{Microsoft}, \textit{Motorola}, \textit{Oracle}.
 Si nos situamos en el tercer mile\~no, la inform\'atica atraviesa un periodo con much\'isimo auge. Existen gran cantidad de escuelas informáticas como son el caso de CACIC, ECI, RIO, etc. Las cuales juegan un papel important\'isimo en el desarrollo acad\'emico y profesional.
 
@@ -349,42 +359,40 @@ El auge aced\'emico que sufren las carreras tecnol\'ogicas en la actualidad, par
 
 \begin{thebibliography}{1}
 
-\bibitem{babini} Jos\'e Babini La llegada de la computadora a la argentina.
-\bibitem{babini2} Jos\'e Babini La argentina y la computadora: Cr\'onica de una frustraci\'on
-\bibitem{santos} Entrevista Jorge Santos.
-\bibitem{Link web} Link web: \link{http://www.uns.edu.ar/cincuenta/amplia\_pricomp.htm}
-\bibitem{LeyMoore} Ley de Moore, art\'iculo Enciclopedia online Wikipedia -\link{http://es.wikipedia.org/wiki/Ley\_de\_Moore}
-\bibitem{z3} Computador Z3, art\'iculo Enciclopedia online Wikipedia - \link{http://en.wikipedia.org/wiki/Z3\_(computer)}
-\bibitem{eniac} Computador ENIAC, art\'iculo Enciclopedia online Wikipedia - \link{http://en.wikipedia.org/wiki/ENIAC}
-\bibitem{newman} Arquitectura Von Neumann, art\'iculo Enciclopedia online Wikipedia - \link{http://en.wikipedia.org/wiki/Von\_Neumann\_architecture}
-\bibitem{edvac} Computador EDVAC, art\'iculo Enciclopedia online Wikipedia - \link{http://en.wikipedia.org/wiki/EDVAC}
-\bibitem{ferranti} Ferranti, art\'iculo Enciclopedia online Wikipedia - \link{http://en.wikipedia.org/wiki/Ferranti}
-\bibitem{mark1} Manchester Mark 1, art\'iculo Enciclopedia online Wikipedia - \link{http://en.wikipedia.org/wiki/Manchester\_Mark\_1}
-\bibitem{sadosky} Manuel Sadosky, art\'iculo Enciclopedia online Wikipedia - \link{http://es.wikipedia.org/wiki/Manuel\_Sadosky}
-\bibitem{sinclair} Sir Clive Marles Sinclair, art\'iculo Enciclopedia online Wikipedia - \link{http://en.wikipedia.org/wiki/Clive\_Sinclair}
-\bibitem{msx} Su acr\'onimo no tiene un significado fijo, pero la mayor\'ia asume que es: ``\textit{MicroSoft eXtended}''. Art\'iculo Enciclopedia online Wikipedia - link{http://en.wikipedia.org/wiki/MSX}
-\bibitem{pecos} Art\'iculos Web computador PECOS - \link{http://geocities.com/dieguillodg/} - \link{http://www.compuclasico.com/argentinos.php?model=pecos.php}
-\bibitem{z80} Microprocesasores Zilog Z80, art\'iculo Enciclopedia online Wikipedia - \link{http://en.wikipedia.org/wiki/Zilog\_Z80}.
-\bibitem{mercosur} Mercado Com\'un del Sur - \link{http://www.mercosur.int}
-\bibitem{kingston} Kingston Technology Company, art\'iculo Enciclopedia online Wikipedia - \link{http://en.wikipedia.org/wiki/Kingston\_Technology}
-\bibitem{amiga} Commodore Amiga, art\'iculo Enciclopedia online Wikipedia - \link{http://en.wikipedia.org/wiki/Amiga}
-\bibitem{atari} Atari ST, art\'iculo Enciclopedia online Wikipedia - \link{http://en.wikipedia.org/wiki/Atari\_st}
+\bibitem{babini} \ibiblio{Nicol\'as Babini}{La llegada de la computadora a la argentina}{biblioteca Jose Babini, 30 de octubre 1997, Vol 20}
+\bibitem{babini2} \ibiblio{Nicol\'as Babini}{La argentina y la computadora: Cr\'onica de una frustraci\'on}
+{con la colaboraci\'on de ``Carlos Vilensky'', Editorial Dunken, Buenos Aires 2003}
+\bibitem{santos} \ibiblio{Jorge Santos}{Entrevista a\~no 2008}{Realizada por Jorge Aguirre en la Universidad Nacional del Sur}
+\bibitem{s1000} \ibiblio{Roberto Zubieta}{La Serie 1000}{Art\'iculo A\~no 2008}
+\bibitem{ciancaCefiba} \ibiblio{Humberto R. Ciancaglini}{La computadora Electronica CEFIBA}{Art\'iculo}
+\bibitem{profe} \ibiblio{Jorge Aguirre}{Panorama de la historia de Computaci\'on en la Argentina y su vinculaci\'on con Am\'erica Latina y el Caribe}{Realizado en la UNRC en el marco del Proyecto SAMCA}
+\bibitem{profeCarnota} \ibiblio{Jorge Aguirre, Raul Carnota}{Los proyectos acad\'emicos de desarrollo inform\'atico durante el retorno democr\'atico Argentino de 1983 y su proyecci\'on Latinoamericana}{realizado en el marco del Proyecto SAMCA}\\
+
+
+\begin{center}REFERENCIAS WEB (Julio 2009)\end{center}
+
+\begin{quote} \end{quote}
+% \bibitem{Link web} \ibiblio{Pagina oficial UNS}{×}{\link{http://www.uns.edu.ar/cincuenta/amplia\_pricomp.htm}} 
+\bibitem{LeyMoore} \ibiblio{}{Ley de Moore}{http://es.wikipedia.org/wiki/Ley\_de\_Moore}
+\bibitem{z3} \ibiblio{}{Computador Z3}{http://en.wikipedia.org/wiki/Z3\_(computer)}
+\bibitem{colosus}\ibiblio{}{computador Colossus}{http://en.wikipedia.org/wiki/Colossus\_computer}
+\bibitem{eniac} \ibiblio{}{Computador ENIAC}{http://en.wikipedia.org/wiki/ENIAC}
+\bibitem{newman} \ibiblio{}{Arquitectura Von Neumann}{http://en.wikipedia.org/wiki/Von\_Neumann\_architecture}
+\bibitem{edvac} \ibiblio{}{Computador EDVAC}{http://en.wikipedia.org/wiki/EDVAC}
+\bibitem{ferranti} \ibiblio{}{Ferranti}{http://en.wikipedia.org/wiki/Ferranti}
+\bibitem{mark1} \ibiblio{}{Manchester Mark 1}{http://en.wikipedia.org/wiki/Manchester\_Mark\_1}
+\bibitem{sadosky} \ibiblio{}{Manuel Sadosky}{http://es.wikipedia.org/wiki/Manuel\_Sadosky}
+\bibitem{sinclair} \ibiblio{}{Sir Clive Marles Sinclair}{http://en.wikipedia.org/wiki/Clive\_Sinclair}
+\bibitem{msx} \ibiblio{}{MicroSoft eXtended}{http://en.wikipedia.org/wiki/MSX}
+\bibitem{pecos} \ibiblio{}{Computador PECOS}{http://www.compuclasico.com/argentinos.php?model=pecos.php}
+\bibitem{z80} \ibiblio{}{Microprocesasores Zilog Z80}{http://en.wikipedia.org/wiki/Zilog\_Z80}
+\bibitem{mercosur} \ibiblio{}{Mercado Com\'un del Sur}{http://www.mercosur.int}
+\bibitem{kingston} \ibiblio{}{Kingston Technology Company}{http://en.wikipedia.org/wiki/Kingston\_Technology}
+\bibitem{amiga} \ibiblio{}{Commodore Amiga}{http://en.wikipedia.org/wiki/Amiga}
+\bibitem{atari} \ibiblio{}{Atari ST}{http://en.wikipedia.org/wiki/Atari\_st}
 
 \end{thebibliography}
 
-%----------------------------------------------------------------------
-
-\begin{biography}[gera.jpg]{AC. Kilmurray, Gerardo Luis}\\
-Departamento de Computaci\'on, FCEFQyN, UNRC.\\
-Email: gerakilmurray@gmail.com\\
-Direcci\'on Postal: X5808DPH \\
-\end{biography}
-
-
-\begin{biography}[Gon.jpg]{AC. Picco, Gonzalo Mart\'in}\\
-Departamento de Computaci\'on, FCEFQyN, UNRC.\\
-Email: gonzalopicco@gmail.com\\
-Direcci\'on Postal: 5800DNJ Piso 3 Depto 6 \\
-\end{biography}
+%----------------------------------------------------------------------fin----------------------------------------------------
 
 \end{document}
